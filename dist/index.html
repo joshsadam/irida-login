@@ -7,7 +7,7 @@
     <script th:inline="javascript">
       window.TL = {
         BASE_URL: /*[[@{"/"}]]*/ "/",
-        emailConfigured: true
+        emailConfigured: /*[[${emailConfigured}]]*/ false
       };
     </script>
     <style>
@@ -117,6 +117,6 @@
     </div>
 </div>
 <script th:src="@{/dist/js/login.bundle.js}"></script>
-<script src="/static/login.js"></script>
+<script th:src="@{/static/login.js}"></script>
 </body>
 </html>
